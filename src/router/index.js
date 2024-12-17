@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 // 引入页面组件
 import ViewOne from '../views/ViewOne.vue';
@@ -41,10 +41,9 @@ const routes = [
   }
 ];
 
-// 创建路由实例
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+  history: createWebHashHistory(), // 使用 Hash 模式
+  routes,
 });
 
 export default router;
